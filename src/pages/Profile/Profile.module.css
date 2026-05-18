@@ -1,0 +1,41 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 25px 20px;
+  box-sizing: border-box;
+}
+
+.deliveryDetailsWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.deliveryDetailsForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.deliveryDetailsForm button {
+  border-radius: 8px;
+}
+
+.deliveryDetailsForm h2 {
+  text-align: center;
+}
+
+.inputsRow {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+}
+
+.inputsRow > * {
+  flex: 1;
+  min-width: 0;
+}

@@ -1,0 +1,79 @@
+.card {
+  border: 1px solid rgba(217, 217, 217, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+  animation: cardAppear 0.55s ease both;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.card:active {
+  transform: translateY(-2px) scale(0.98);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.imgWrap {
+  position: relative;
+  background: #000000;
+  aspect-ratio: 1 / 1;
+  padding: 5%;
+  overflow: hidden;
+}
+
+.imgWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .imgWrap img {
+  transform: scale(1.08);
+}
+
+.info {
+  margin: 16px 0;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  justify-content: space-between;
+}
+
+@media (max-width: 575px) {
+  .info {
+    margin: 10px 0;
+    gap: 4px;
+    padding: 0 4px;
+  }
+
+  .info p:first-child {
+    font-size: 11px;
+  }
+
+  .info p:last-child {
+    font-size: 13px;
+  }
+}
+
+@keyframes cardAppear {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

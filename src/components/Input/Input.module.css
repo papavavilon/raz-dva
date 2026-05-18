@@ -1,0 +1,98 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+  transition: color 0.2s ease;
+}
+
+.wrapper:focus-within .label {
+  color: #111827;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 16px;
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.row:focus-within {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.row.error {
+  border-color: #ef4444;
+}
+
+.row.error:focus-within {
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #111827;
+  font-family: inherit;
+  width: 100%;
+}
+
+@keyframes slideDownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hint {
+  font-size: 14px;
+  color: #6b7280;
+  animation: slideDownFade 0.25s ease-out forwards;
+}
+
+.errorMessage {
+  font-size: 14px;
+  color: #ef4444;
+  animation: slideDownFade 0.25s ease-out forwards;
+}
+
+@media (max-width: 640px) {
+  .wrapper {
+    gap: 4px;
+  }
+
+  .label {
+    font-size: 12px;
+  }
+
+  .row {
+    padding: 10px 12px;
+  }
+
+  .hint,
+  .errorMessage {
+    font-size: 12px;
+  }
+}

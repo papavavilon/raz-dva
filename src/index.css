@@ -1,0 +1,236 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0 solid transparent;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-family: 'Inter Tight', sans-serif;
+}
+
+:root {
+  --horihontal-padding: 25px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.text-title-hero-l {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 48px;
+  font-weight: 900;
+  font-style: normal;
+  line-height: 43px;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.text-title-hero-m {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 42px;
+  font-weight: 900;
+  font-style: normal;
+  line-height: 38px;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.text-title-hero-s {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 30px;
+  font-weight: 900;
+  font-style: normal;
+  line-height: 30px;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.title-page-l {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 45px;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.title-page-m {
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 32px;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.subtitle-l {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 38px;
+  letter-spacing: -0.608px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.subtitle-m {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 24px;
+  letter-spacing: -0.38px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.heading-l {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 43.66px;
+  letter-spacing: 1px;
+  text-transform: lowercase;
+  text-decoration: none;
+}
+
+.body-l {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 28px;
+  letter-spacing: 0px;
+  text-transform: none;
+  text-decoration: none;
+}
+
+.body-m {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 14.4px;
+  letter-spacing: -0.36px;
+  text-transform: none;
+  text-decoration: none;
+}
+
+.body-bold-24 {
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 28.8px;
+  letter-spacing: -0.48px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.body-bold-xl {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 24px;
+  letter-spacing: -0.4px;
+  text-transform: none;
+  text-decoration: none;
+}
+
+.body-bold-l {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.body-bold-m {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 14px;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.nav-item {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.caption-l {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 10px;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 10px;
+  letter-spacing: 0px;
+  text-transform: none;
+  text-decoration: none;
+}
+
+.button-l {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 120%;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.button-m {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 10px;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.text-secondary {
+  color: #757575;
+}
+
+@font-face {
+  font-family: 'Coolvectica';
+  src: url('./assets/fonts/Coolvetica Rg.otf') format('opentype');
+}

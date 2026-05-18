@@ -1,0 +1,156 @@
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.policyWrapper {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.policyWrapper a {
+  text-decoration: none;
+  color: black;
+}
+
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 32px;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
+
+.logoContainer {
+  margin: 0 auto 40px;
+}
+
+.logoContainer img {
+  height: 25px;
+  width: auto;
+}
+
+.formContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.formContent h1 {
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.subtitle {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.oauthButtonsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: stretch;
+  width: 100%;
+}
+
+.oauthButtonContent {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}
+
+.dividerRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.dividerLine {
+  flex: 1;
+  height: 1px;
+  background-color: #595d62;
+  opacity: 0.5;
+}
+
+@media (min-width: 1600px) {
+  .formWrapper {
+    max-width: 480px;
+    padding: 48px;
+  }
+
+  .logoContainer {
+    margin: 0 auto 56px;
+  }
+
+  .logoContainer img {
+    height: 32px;
+  }
+
+  .formContent {
+    gap: 20px;
+  }
+
+  .oauthButtonsContainer {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .formWrapper {
+    max-width: 360px;
+    padding: 24px;
+  }
+
+  .logoContainer {
+    margin: 0 auto 32px;
+  }
+}
+
+@media (max-width: 576px) {
+  .wrapper {
+    padding: 0;
+    background-color: #ffffff;
+  }
+
+  .formWrapper {
+    max-width: 100%;
+    height: 100vh;
+    border: none;
+    border-radius: 0;
+    padding: 12vh 24px 24px 24px;
+    justify-content: flex-start;
+  }
+
+  .logoContainer {
+    margin: 0 auto 50px;
+  }
+
+  .logoContainer img {
+    height: 35px;
+  }
+
+  .policyWrapper {
+    bottom: 40px;
+  }
+}

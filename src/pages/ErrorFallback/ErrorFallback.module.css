@@ -1,0 +1,204 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #080808;
+  color: white;
+  text-align: center;
+  position: relative;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.brandHeader {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.brandHeader img {
+  height: 24px;
+  width: auto;
+}
+
+.contentWrapper {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.bgText {
+  letter-spacing: -0.05em;
+  color: rgba(255, 255, 255, 0.1);
+  font-size: 5rem;
+  margin: 0 0 1rem 0;
+  line-height: 1;
+}
+
+.title {
+  text-transform: uppercase;
+  letter-spacing: -0.025em;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  font-size: 2rem;
+}
+
+.titleTko {
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+}
+
+.highlightRed {
+  color: #dc2626;
+}
+
+.description {
+  color: #9ca3af;
+  margin-bottom: 2rem;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+
+.errorBox {
+  background-color: #111111;
+  padding: 10px;
+  border-left: 4px solid #dc2626;
+  text-align: left;
+  margin-bottom: 2rem;
+  font-size: 0.75rem;
+  color: #d1d5db;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  overflow: auto;
+  width: 100%;
+  max-width: 100%;
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+}
+
+.errorLabel {
+  color: #ef4444;
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+.buttonGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .brandHeader {
+    top: 2rem;
+    left: 2rem;
+  }
+
+  .brandHeader img {
+    height: 30px;
+  }
+
+  .bgText {
+    font-size: 7rem;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .titleTko {
+    font-size: 3.5rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    max-width: 28rem;
+  }
+
+  .errorBox {
+    max-width: 36rem;
+    font-size: 0.875rem;
+  }
+
+  .buttonGroup {
+    flex-direction: row;
+    width: auto;
+  }
+}
+
+@media (min-width: 1280px) {
+  .contentWrapper {
+    max-width: 42rem;
+  }
+
+  .bgText {
+    font-size: 9rem;
+  }
+
+  .title {
+    font-size: 3.75rem;
+  }
+
+  .titleTko {
+    font-size: 4.5rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .brandHeader {
+    top: 3rem;
+    left: 3rem;
+  }
+
+  .brandHeader img {
+    height: 40px;
+  }
+
+  .contentWrapper {
+    max-width: 60rem;
+  }
+
+  .bgText {
+    font-size: 12rem;
+  }
+
+  .title {
+    font-size: 5rem;
+  }
+
+  .titleTko {
+    font-size: 6rem;
+  }
+
+  .description {
+    font-size: 1.25rem;
+    max-width: 40rem;
+  }
+
+  .errorBox {
+    max-width: 48rem;
+    font-size: 1rem;
+    padding: 1.25rem;
+  }
+
+  .buttonGroup {
+    gap: 1.5rem;
+  }
+}

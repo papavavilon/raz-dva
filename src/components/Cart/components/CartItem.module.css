@@ -1,0 +1,171 @@
+.container {
+  width: 100%;
+  display: flex;
+  gap: 22px;
+  margin-bottom: 16px;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    max-height 0.3s ease,
+    margin-bottom 0.3s ease;
+  max-height: 400px;
+  opacity: 1;
+  transform: scale(1);
+  transform-origin: center;
+  overflow: hidden;
+}
+
+.deleting {
+  opacity: 0;
+  transform: scale(0.95);
+  max-height: 0;
+  margin-bottom: 0;
+}
+
+.imgContainer {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000000;
+  padding: 2%;
+  margin-bottom: 16px;
+  overflow: hidden;
+  height: 270px;
+}
+
+.imgContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.content {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+}
+
+.contentHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contentHeader p {
+  max-width: 80%;
+}
+
+.deleteContainer {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background: none;
+  transition:
+    transform 0.15s ease,
+    opacity 0.15s ease;
+}
+
+.deleteContainer svg {
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.deleteContainer:hover {
+  transform: scale(1.05);
+}
+
+.deleteContainer:hover svg {
+  opacity: 0.7;
+  transform: rotate(90deg);
+}
+
+.deleteContainer:active {
+  transform: scale(0.92);
+}
+
+.deleteContainer:active svg {
+  transform: rotate(90deg) scale(0.9);
+}
+
+.priceContainer {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 10px;
+  color: #595d62;
+}
+
+.variantsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin-top: 11px;
+}
+
+.variantContainer {
+  color: #595d62;
+  display: flex;
+  align-items: flex-start;
+}
+
+.counterWrapper {
+  margin-top: auto;
+  width: 80%;
+}
+
+@media (max-width: 575px) {
+  .container {
+    gap: 12px;
+  }
+
+  .imgContainer {
+    height: 200px;
+    margin-bottom: 0;
+    padding: 5%;
+  }
+
+  .contentHeader {
+    align-items: flex-start;
+  }
+
+  .contentHeader p {
+    max-width: 85%;
+  }
+
+  .variantsWrapper {
+    gap: 8px;
+    margin-top: 8px;
+  }
+
+  .counterWrapper {
+    margin-top: auto;
+    padding-top: 12px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 1279px) {
+  .container {
+    gap: 16px;
+  }
+
+  .imgContainer {
+    height: 220px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .container {
+    gap: 32px;
+    max-height: 500px;
+  }
+
+  .imgContainer {
+    height: 350px;
+  }
+}

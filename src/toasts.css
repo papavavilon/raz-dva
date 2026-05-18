@@ -1,0 +1,111 @@
+:root {
+  --rdx-bg: #0b0f1e;
+  --rdx-border: #1a2a4a;
+  --rdx-blue: #1a6dff;
+  --rdx-blue-dim: rgba(26, 109, 255, 0.12);
+  --rdx-success: #10b759;
+  --rdx-success-dim: rgba(16, 183, 89, 0.12);
+  --rdx-error: #e53e3e;
+  --rdx-error-dim: rgba(229, 62, 62, 0.12);
+  --rdx-warning: #f5a623;
+  --rdx-warning-dim: rgba(245, 166, 35, 0.12);
+  --rdx-text: #ffffff;
+  --rdx-text-muted: rgba(255, 255, 255, 0.55);
+  --rdx-radius: 6px;
+}
+
+.Toastify__toast-container {
+  padding: 0;
+  width: 340px;
+}
+
+.Toastify__toast {
+  background: var(--rdx-bg);
+  border: 1px solid var(--rdx-border);
+  border-radius: var(--rdx-radius);
+  color: var(--rdx-text);
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  padding: 14px 16px;
+  min-height: unset;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.55);
+  border-left: 3px solid var(--rdx-blue);
+  margin-bottom: 10px;
+}
+
+.Toastify__toast--success {
+  border-left-color: var(--rdx-success);
+  background: color-mix(in srgb, var(--rdx-bg) 90%, var(--rdx-success-dim));
+}
+
+.Toastify__toast--error {
+  border-left-color: var(--rdx-error);
+  background: color-mix(in srgb, var(--rdx-bg) 90%, var(--rdx-error-dim));
+}
+
+.Toastify__toast--warning {
+  border-left-color: var(--rdx-warning);
+  background: color-mix(in srgb, var(--rdx-bg) 90%, var(--rdx-warning-dim));
+}
+
+.Toastify__toast--info {
+  border-left-color: var(--rdx-blue);
+}
+
+.Toastify__toast-body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.Toastify__toast-icon {
+  width: 18px;
+  min-width: 18px;
+  margin-top: 1px;
+}
+
+.Toastify__toast--info .Toastify__toast-icon svg {
+  fill: var(--rdx-blue);
+}
+
+.Toastify__toast--success .Toastify__toast-icon svg {
+  fill: var(--rdx-success);
+}
+
+.Toastify__toast--error .Toastify__toast-icon svg {
+  fill: var(--rdx-error);
+}
+
+.Toastify__toast--warning .Toastify__toast-icon svg {
+  fill: var(--rdx-warning);
+}
+
+.Toastify__close-button {
+  color: var(--rdx-text-muted);
+  opacity: 1;
+  align-self: flex-start;
+  padding: 0;
+}
+
+.Toastify__close-button:hover {
+  color: var(--rdx-text);
+}
+
+.Toastify__slide-enter--top-right,
+.Toastify__slide-enter--bottom-right {
+  animation-name: rdx-slide-in;
+}
+
+@keyframes rdx-slide-in {
+  from {
+    transform: translateX(110%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

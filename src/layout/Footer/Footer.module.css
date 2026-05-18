@@ -1,0 +1,158 @@
+.wrapper {
+  width: 100%;
+  padding: 24px var(--horihontal-padding, 32px) 24px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.footer {
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding-top: 32px;
+  padding-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.brandContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.logosContainer {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-top: 45px;
+}
+
+.logosContainer svg {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+}
+
+.logosContainer svg:nth-child(2) {
+  width: 26px;
+  height: 26px;
+}
+
+.logo {
+  height: 37px;
+  width: auto;
+}
+
+.sitemap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contactContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactTitle {
+  text-transform: uppercase;
+}
+
+.copyright {
+  width: 100%;
+  max-width: 1440px;
+  text-align: left;
+  text-transform: uppercase;
+  margin-top: 48px;
+}
+
+.contactInput {
+  padding: 8px 10px;
+  width: 258px;
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  line-height: 0;
+  box-sizing: border-box;
+}
+
+.contactInput::placeholder {
+  color: #595d62;
+}
+
+.contactInputWrapper {
+  display: flex;
+  margin-top: 15px;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.inputButton {
+  border-radius: 8px;
+  padding: 16px 20px;
+  white-space: nowrap;
+}
+
+@media (max-width: 1024px) {
+  .footer {
+    justify-content: flex-start;
+    gap: 60px;
+  }
+
+  .contactContainer {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 24px 16px;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .contactInputWrapper {
+    width: 100%;
+  }
+
+  .contactInput {
+    flex: 1;
+    width: auto;
+    min-width: 0;
+  }
+
+  .inputButton {
+    flex-shrink: 0;
+  }
+
+  .logosContainer {
+    margin-top: 24px;
+    gap: 12px;
+  }
+
+  .logosContainer svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .logosContainer svg:nth-child(2) {
+    width: 17px;
+    height: 17px;
+  }
+
+  .logo {
+    height: 25px;
+    margin-right: auto;
+  }
+
+  .copyright {
+    margin-top: 32px;
+    font-size: 12px;
+  }
+}

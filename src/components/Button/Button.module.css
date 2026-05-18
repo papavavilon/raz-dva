@@ -1,0 +1,142 @@
+.base {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font: inherit;
+  background: transparent;
+}
+
+.base:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.outlineLight {
+  padding: 8px;
+  border: 1px solid #ffffff;
+  border-radius: 2px;
+  color: #ffffff;
+  transition:
+    background 0.15s ease,
+    opacity 0.15s ease;
+}
+
+.outlineLight:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.outlineLight:active {
+  background: rgba(255, 255, 255, 0.2);
+  opacity: 0.8;
+}
+
+.outlineDark {
+  padding: 8px;
+  border: 1px solid #000000;
+  border-radius: 2px;
+  color: #000000;
+  transition:
+    background 0.15s ease,
+    opacity 0.15s ease;
+}
+
+.outlineDark:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.outlineDark:active {
+  background: rgba(0, 0, 0, 0.12);
+  opacity: 0.8;
+}
+
+.main {
+  padding: 12px;
+  background: #003360;
+  border: 1px solid #183855;
+  border-radius: 2px;
+  color: #ffffff;
+  transition:
+    background 0.15s ease,
+    transform 0.1s ease;
+}
+
+.main:hover {
+  background: #004080;
+}
+
+.main:active {
+  background: #002548;
+  transform: scale(0.98);
+}
+
+.secondary {
+  padding: 12px;
+  background: #2c2c2c;
+  border: 1px solid #2c2c2c;
+  border-radius: 8px;
+  color: #ffffff;
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease,
+    transform 0.1s ease;
+}
+
+.secondary:hover {
+  background: #3f3f3f;
+  border-color: #3f3f3f;
+}
+
+.secondary:active {
+  background: #1a1a1a;
+  border-color: #1a1a1a;
+  transform: scale(0.98);
+}
+
+.success {
+  padding: 12px;
+  background: #1f6f3d;
+  border: 1px solid #2e8b57;
+  border-radius: 8px;
+  color: #ffffff;
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease,
+    transform 0.1s ease;
+}
+
+.success:hover {
+  background: #26864a;
+  border-color: #3aa76d;
+}
+
+.success:active {
+  background: #17552e;
+  border-color: #1f6f3d;
+  transform: scale(0.98);
+}
+
+.light {
+  padding: 12px;
+  background: #f5f5f5;
+  border: 1px solid #595d62;
+  border-radius: 8px;
+  color: #2c2c2c;
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease,
+    transform 0.1s ease;
+}
+
+.light:hover {
+  background: #e8e8e8;
+  border-color: #3f4347;
+}
+
+.light:active {
+  background: #d9d9d9;
+  border-color: #2c2f32;
+  transform: scale(0.98);
+}

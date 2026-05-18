@@ -1,0 +1,16 @@
+.floatingContainer {
+  position: fixed;
+  bottom: 60px;
+  right: var(--horihontal-padding);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  z-index: 100;
+}
+
+@media (max-width: 500px) {
+  .floatingContainer {
+    bottom: 30px;
+  }
+}
