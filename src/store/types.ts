@@ -23,6 +23,10 @@ export interface AddToCartParams {
 }
 
 export interface CartSlice {
+  isCartOpen: boolean;
+  openCart: () => void;
+  closeCart: () => void;
+  toggleCart: () => void;
   cartItems: CartItem[];
   cartSubtotal: UAH;
   addToCart: (params: AddToCartParams) => void;

@@ -21,7 +21,7 @@
 }
 
 .heroSloganContainer {
-  width: 300px;
+  width: 400px;
   display: flex;
   flex-direction: column;
 }
@@ -192,6 +192,16 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+
+.productCardTextContainer p {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 100%;
+  white-space: normal;
+  word-break: break-word;
 }
 
 .productCardImgWrapper {
@@ -700,14 +710,7 @@
   }
 
   .productCardTextContainer p {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
     font-size: 0.8rem;
-    line-height: 100%;
-    white-space: normal;
-    word-break: break-word;
   }
 
   .productCardImgWrapper {

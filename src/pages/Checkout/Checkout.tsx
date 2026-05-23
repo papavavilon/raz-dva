@@ -33,7 +33,7 @@ interface FormValues extends ShippingAddress {
 }
 
 const Checkout = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const navigate = useNavigate();
 
   const cartSlice = useCartSlice();
@@ -75,7 +75,7 @@ const Checkout = () => {
   const formatSelectedOptions = (options: SelectedOptions) => {
     return [
       options.size?.label,
-      options.color && toTitleCase(options.color),
+      options.color && toTitleCase(t(options.color)),
       options.weight ? `${options.weight}oz` : undefined,
     ]
       .filter((v): v is string => Boolean(v))
@@ -145,7 +145,7 @@ const Checkout = () => {
     });
     cartSlice.clearCart();
 
-    notify.success(t(`Paid successfully with ${method}!`));
+    notify.success(t(`Paid successfully with`) + ` ${method}!`);
     setOrder(order);
   };
 
@@ -177,16 +177,16 @@ const Checkout = () => {
     });
     cartSlice.clearCart();
 
-    notify.success('Order placed successfully!');
+    notify.success(t('Order placed successfully!'));
     setOrder(order);
   };
 
-  const isPromoValid = /^[A-Za-z0-9]{8}$/.test(promocode);
-
   const handleApplyPromo = () => {
-    if (isPromoValid) {
+    if (promocode.toLowerCase() === 'udar') {
       setDiscountApplied(true);
       notify.success(t('Promo code applied!'));
+    } else {
+      notify.error(t('Promo code is invalid!'));
     }
   };
 
@@ -198,7 +198,7 @@ const Checkout = () => {
     if (cartSlice.cartItems.length === 0 && !order) {
       navigate('/catalog', { replace: true });
       notify.warning(
-        'You cannot access checkout page without any items in cart!',
+        t('You cannot access checkout page without any items in cart!'),
       );
     }
   }, [cartSlice.cartItems.length, order, navigate]);
@@ -298,15 +298,19 @@ const Checkout = () => {
                     <p className="body-bold-xl">{t('What’s Next?')}</p>
                     <ul className="body-l">
                       <li>
-                        You will receive an order confirmation email with
-                        details of your purchase.
+                        {t(
+                          'You will receive an order confirmation email with details of your purchase.',
+                        )}
                       </li>
                       <li>
-                        Once your order is shipped, we will send you a tracking
-                        number and shipping updates.
+                        {t(
+                          'Once your order is shipped, we will send you a tracking number and shipping updates.',
+                        )}
                       </li>
                       <li>
-                        If you have any questions, contact our support team.
+                        {t(
+                          'If you have any questions, contact our support team.',
+                        )}
                       </li>
                     </ul>
                     <p className="body-m">
@@ -356,11 +360,15 @@ const Checkout = () => {
                       </p>
                       <div className="body-l">
                         <p>
-                          <span className="text-secondary">Order Number:</span>{' '}
+                          <span className="text-secondary">
+                            {t('Order Number')}:
+                          </span>{' '}
                           #{order.orderNumber}
                         </p>
                         <p>
-                          <span className="text-secondary">Order Date:</span>{' '}
+                          <span className="text-secondary">
+                            {t('Order Date')}:
+                          </span>{' '}
                           {new Date(order.placedAt).toLocaleDateString(
                             'en-US',
                             {
@@ -376,7 +384,7 @@ const Checkout = () => {
                         </p>
                         <p>
                           <span className="text-secondary">
-                            Payment Method:
+                            {t('Payment Method')}:
                           </span>{' '}
                           {formatPaymentMethodDetails(order)}
                         </p>
@@ -749,7 +757,9 @@ const Checkout = () => {
                     <div className={styles.productItemContentWrapper}>
                       <div className={styles.productItemContentRow}>
                         <p className={`body-bold-l ${styles.productName}`}>
-                          {product.name}
+                          {i18n.language === 'ua'
+                            ? product.nameUa
+                            : product.name}
                         </p>{' '}
                         <div className={styles.priceWrapper}>
                           <p className="body-bold-m">₴</p>
@@ -777,7 +787,6 @@ const Checkout = () => {
                   variant="light"
                   className={styles.promoButton}
                   type="button"
-                  disabled={!isPromoValid}
                   onClick={handleApplyPromo}
                 >
                   <p>{t('Apply')}</p>

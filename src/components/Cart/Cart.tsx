@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import styles from './Cart.module.css';
 import { useTranslation } from 'react-i18next';
 import { useCartSlice } from '../../store';
@@ -14,8 +13,6 @@ const Cart = () => {
   const navigate = useNavigate();
   const cartSlice = useCartSlice();
 
-  const [isOpen, setIsOpen] = useState(false);
-
   const isVisible = cartSlice.cartItems.length > 0;
 
   const handleQuantityChange = (cartItemId: string) => {
@@ -26,7 +23,7 @@ const Cart = () => {
         if (error instanceof Error) {
           notify.error(error.message);
         } else {
-          console.error('An unexpected error occurred:', error);
+          console.error(t('An unexpected error occurred:'), error);
         }
       }
     };
@@ -39,13 +36,14 @@ const Cart = () => {
   const handleCheckout = () => {
     if (cartSlice.cartSubtotal > 0) {
       navigate('/checkout');
+      cartSlice.closeCart();
     }
   };
 
   return (
     <>
       <FloatingButton
-        onClick={() => setIsOpen(true)}
+        onClick={cartSlice.openCart}
         icon={
           <svg
             className={styles.cartIcon}
@@ -66,8 +64,8 @@ const Cart = () => {
       />
 
       <Drawer
-        isOpen={isOpen}
-        onClose={() => setIsOpen(false)}
+        isOpen={cartSlice.isCartOpen}
+        onClose={cartSlice.closeCart}
         title={t('Your Cart')}
       >
         <div className={styles.cartContent}>

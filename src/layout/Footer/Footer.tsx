@@ -23,7 +23,7 @@ const Footer = () => {
 
   const onContactSubmit: SubmitHandler<ContactFormValues> = (data) => {
     console.log(data);
-    notify.success('Email sent!');
+    notify.success(t('Email sent!'));
     resetContact();
   };
 

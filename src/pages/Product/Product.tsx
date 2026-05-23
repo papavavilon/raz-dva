@@ -20,7 +20,7 @@ type FormValues = {
 
 const Product = () => {
   const { slug } = useParams();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const cartSlice = useCartSlice();
   const userSlice = useUserSlice();
@@ -63,10 +63,10 @@ const Product = () => {
   const handleFavourite = () => {
     if (isFavourite) {
       favouriteSlice.removeFromFavourites(product.id);
-      notify.success('Removed from favourites!');
+      notify.success(t('Removed from favourites!'));
     } else {
       favouriteSlice.addToFavourites(product.id);
-      notify.success('Successfully added to favourites!');
+      notify.success(t('Successfully added to favourites!'));
     }
   };
 
@@ -77,10 +77,10 @@ const Product = () => {
         selectedOptions: data,
         quantity: 1,
       });
-      notify.success('Successfully added to cart!');
+      notify.success(t('Successfully added to cart!'));
       return;
     }
-    notify.warning('Product already in cart!');
+    notify.warning(t('Product already in cart!'));
   };
 
   return (
@@ -169,7 +169,9 @@ const Product = () => {
         </button>
       </div>
       <form className={styles.productInfo} onSubmit={handleSubmit(onSubmit)}>
-        <h1 className="title-page-l">{product.name}</h1>
+        <h1 className="title-page-l">
+          {i18n.language === 'ua' ? product.nameUa : product.name}
+        </h1>
         <div className={styles.priceWrapper}>
           <div className={styles.stockTag}>
             <p className="body-l">{t('In stock')}</p>
@@ -213,7 +215,7 @@ const Product = () => {
                     onChange={field.onChange}
                     onBlur={field.onBlur}
                     ref={field.ref}
-                    getLabel={(s) => toTitleCase(s)}
+                    getLabel={(s) => toTitleCase(t(s))}
                   />
                 )}
               />

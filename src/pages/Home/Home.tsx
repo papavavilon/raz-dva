@@ -27,7 +27,7 @@ type FormValues = {
 };
 
 const Home = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const {
     register,
@@ -79,7 +79,7 @@ const Home = () => {
       },
     });
 
-    notify.success('Added to cart!');
+    notify.success(t('Added to cart!'));
   };
 
   const scroll = (direction: number) => {
@@ -88,7 +88,7 @@ const Home = () => {
 
   const onSubmit: SubmitHandler<FormValues> = (data) => {
     console.log(data);
-    notify.success('Feedback sent!');
+    notify.success(t('Feedback sent!'));
     reset();
   };
 
@@ -130,9 +130,13 @@ const Home = () => {
                   <div className={styles.productCardContent}>
                     <div className={styles.productCardTextContainer}>
                       <p className="caption-l">
-                        {prettifyCategory(randomProduct.category)}
+                        {prettifyCategory(t(randomProduct.category))}
                       </p>
-                      <p className="button-l">{randomProduct.name}</p>
+                      <p className="button-l">
+                        {i18n.language === 'ua'
+                          ? randomProduct.nameUa
+                          : randomProduct.name}
+                      </p>
                       <p className="caption-l">{randomProduct.brand}</p>
                     </div>
                     <div className={styles.productCardButtonsContainer}>
@@ -170,7 +174,7 @@ const Home = () => {
           </div>
           <div className={styles.heroParagraphWrapper}>
             <p className={styles.heroParagraph}>
-              <Trans>
+              <Trans i18nKey="heroSubtitle">
                 High-quality equipment for <b>MMA</b>, <b>boxing</b>, and{' '}
                 <b>wrestling for athletes</b> who value <b>protection</b>,{' '}
                 <b>comfort</b>, and the right choice without compromise.
@@ -299,7 +303,7 @@ const Home = () => {
       </section>
       <section className={styles.reasonsSection}>
         <h2 className="title-page-l">
-          <Trans>
+          <Trans i18nKey="heroSlogan">
             WHY PEOPLE TRUST
             <br />
             RAZDVA FIGHTSHOP
@@ -455,7 +459,7 @@ const Home = () => {
         <div className={styles.feedbackWrapper}>
           <div className={styles.feedbackTextWrapper}>
             <h3 className="title-page-m">
-              <Trans>
+              <Trans i18nKey="experienceTitle">
                 Tell Us About
                 <br />
                 Your Experience
@@ -487,7 +491,7 @@ const Home = () => {
         <h2 className={styles.faqTitle}>{t('FAQs')}</h2>
         <div className={styles.faqHeaderContainer}>
           <p className={styles.faqText}>
-            <Trans>
+            <Trans i18nKey="faqText">
               Everything you may need to know about
               <br />
               ordering, delivery, products, and customer

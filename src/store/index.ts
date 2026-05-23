@@ -34,6 +34,10 @@ export const useUserSlice = () =>
 export const useCartSlice = () =>
   useStore(
     useShallow((s) => ({
+      isCartOpen: s.isCartOpen,
+      openCart: s.openCart,
+      closeCart: s.closeCart,
+      toggleCart: s.toggleCart,
       cartItems: s.cartItems,
       cartSubtotal: s.cartSubtotal,
       addToCart: s.addToCart,

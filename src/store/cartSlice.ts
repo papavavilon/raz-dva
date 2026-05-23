@@ -23,6 +23,11 @@ const calcSubtotal = (items: CartItem[]): UAH =>
   }, 0);
 
 export const createCartSlice: SliceCreator<CartSlice> = (set, get) => ({
+  isCartOpen: false,
+  openCart: () => set({ isCartOpen: true }),
+  closeCart: () => set({ isCartOpen: false }),
+  toggleCart: () => set((state) => ({ isCartOpen: !state.isCartOpen })),
+
   cartItems: [],
   cartSubtotal: 0,
 

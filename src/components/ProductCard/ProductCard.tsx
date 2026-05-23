@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import type { ProductCard as IProductCard } from '../../types';
 import styles from './ProductCard.module.css';
 import { getProductPreviewImg } from '../../utils';
+import { useTranslation } from 'react-i18next';
 
 interface ProductCardProps {
   product: IProductCard;
@@ -16,6 +17,8 @@ const ProductCard = ({
   className,
   onClick,
 }: ProductCardProps) => {
+  const { i18n } = useTranslation();
+
   const navigate = useNavigate();
 
   const previewImg = getProductPreviewImg(product.id);
@@ -35,7 +38,9 @@ const ProductCard = ({
         <img src={previewImg.url} alt={previewImg.alt} />
       </div>
       <div className={styles.info}>
-        <p className="body-l">{product.name}</p>
+        <p className="body-l">
+          {i18n.language === 'ua' ? product.nameUa : product.name}
+        </p>
         <p className="body-bold-l">₴{product.price}</p>
       </div>
     </div>

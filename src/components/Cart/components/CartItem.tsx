@@ -14,7 +14,7 @@ interface CartItemProps {
 }
 
 const CartItem = ({ cartItem, onQuantityChange, onDelete }: CartItemProps) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [isDeleting, setIsDeleting] = useState(false);
 
   const product = getProductById(cartItem.productId);
@@ -34,7 +34,9 @@ const CartItem = ({ cartItem, onQuantityChange, onDelete }: CartItemProps) => {
       </div>
       <div className={styles.content}>
         <div className={styles.contentHeader}>
-          <p className="body-bold-l">{product.name}</p>
+          <p className="body-bold-l">
+            {i18n.language === 'ua' ? product.nameUa : product.name}
+          </p>
           <button className={styles.deleteContainer} onClick={handleDelete}>
             <svg
               width="24"
@@ -61,7 +63,7 @@ const CartItem = ({ cartItem, onQuantityChange, onDelete }: CartItemProps) => {
             <div className={styles.variantContainer}>
               <p className="body-m">{t('Color')}</p>
               <p className="body-l">
-                {toTitleCase(cartItem.selectedOptions.color)}
+                {toTitleCase(t(cartItem.selectedOptions.color))}
               </p>
             </div>
           )}

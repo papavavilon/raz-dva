@@ -68,7 +68,7 @@ export function GeneralErrorFallback({
 
       <div className={styles.contentWrapper}>
         <h1 className={styles.titleTko}>
-          <Trans>
+          <Trans key="titleTko">
             Technical <span className={styles.highlightRed}>TKO</span>
           </Trans>
         </h1>

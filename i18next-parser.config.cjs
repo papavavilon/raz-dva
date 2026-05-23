@@ -5,7 +5,30 @@ module.exports = {
   defaultNamespace: 'translation',
   keySeparator: false,
   namespaceSeparator: false,
-  defaultValue: (locale, namespace, key) => (locale === 'en' ? key : ''),
-  transKeepBasicHtmlNodesFor: ['br', 'strong', 'i', 'b', 'p'],
-  jsx: 'Trans',
+
+  defaultValue: (locale, namespace, key, value) => {
+    if (locale === 'en') {
+      return value || key;
+    }
+    return '';
+  },
+
+  lexers: {
+    js: ['JavascriptLexer'],
+    ts: ['JavascriptLexer'],
+    jsx: [
+      {
+        lexer: 'JsxLexer',
+        transSupportBasicHtmlNodes: true,
+        transKeepBasicHtmlNodesFor: ['br', 'strong', 'i', 'b', 'p'],
+      },
+    ],
+    tsx: [
+      {
+        lexer: 'JsxLexer',
+        transSupportBasicHtmlNodes: true,
+        transKeepBasicHtmlNodesFor: ['br', 'strong', 'i', 'b', 'p'],
+      },
+    ],
+  },
 };

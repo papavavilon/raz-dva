@@ -20,7 +20,7 @@ const Profile = () => {
 
   const onSubmit: SubmitHandler<ShippingAddress> = (data) => {
     updateShippingAddress(data);
-    notify.success('Delivery details updated successfully!');
+    notify.success(t('Delivery details updated successfully!'));
   };
 
   if (!user) {

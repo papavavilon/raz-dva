@@ -18,6 +18,7 @@ export const MOCK_PRODUCTS: ProductDB[] = [
     id: 'prod-001',
     slug: 'rudis-ninety-5',
     name: 'Rudis Ninety 5',
+    nameUa: 'Борцівки Rudis Ninety 5',
     brand: 'Rudis',
     category: 'shoes',
     description:
@@ -35,6 +36,7 @@ export const MOCK_PRODUCTS: ProductDB[] = [
     id: 'prod-009',
     slug: 'nike-hyper-ko2',
     name: 'Nike Hyper KO 2',
+    nameUa: 'Боксерки Nike Hyper KO 2',
     brand: 'Nike',
     category: 'shoes',
     description:
@@ -52,6 +54,7 @@ export const MOCK_PRODUCTS: ProductDB[] = [
     id: 'prod-015',
     slug: 'ks-infinity-edge-cowboy',
     name: 'KS Infinity Edge Adult Wrestling Shoes – Cowboy',
+    nameUa: 'Борцівки KS Infinity Edge Adult Wrestling Shoes – Cowboy',
     brand: 'KS',
     category: 'shoes',
     description:
@@ -72,6 +75,7 @@ export const MOCK_PRODUCTS: ProductDB[] = [
     id: 'prod-016',
     slug: 'ks-infinity-edge-ammo',
     name: 'KS Infinity Edge Adult Wrestling Shoes – Ammo',
+    nameUa: 'Борцівки KS Infinity Edge Adult Wrestling Shoes – Ammo',
     brand: 'KS',
     category: 'shoes',
     description:
@@ -92,7 +96,7 @@ export const MOCK_PRODUCTS: ProductDB[] = [
     id: 'prod-017',
     slug: 'nike-hypersweep',
     name: 'Nike Hypersweep',
-    nameUa: 'Бірцівки Nike Hypersweep',
+    nameUa: 'Борцівки Nike Hypersweep',
     brand: 'Nike',
     category: 'shoes',
     description:
@@ -110,6 +114,7 @@ export const MOCK_PRODUCTS: ProductDB[] = [
     id: 'prod-002',
     slug: 'boxing-gloves-aura-plus',
     name: 'Boxing Gloves Aura Plus',
+    nameUa: 'Боксерські рукавиці Boxing Gloves Aura Plus',
     brand: 'Aura',
     category: 'gloves',
     description:
@@ -128,6 +133,7 @@ export const MOCK_PRODUCTS: ProductDB[] = [
     id: 'prod-004',
     slug: 'venum-top-rank-original-hammer',
     name: 'Venum x Top Rank Original Hammer',
+    nameUa: 'Боксерські рукавиці Venum x Top Rank Original Hammer',
     brand: 'Venum',
     category: 'gloves',
     description:
@@ -149,6 +155,7 @@ export const MOCK_PRODUCTS: ProductDB[] = [
     id: 'prod-005',
     slug: 'hayabusa-star-wars-boba-fett',
     name: 'Hayabusa x Star Wars – Boba Fett Edition',
+    nameUa: 'Боксерські рукавиці Hayabusa x Star Wars – Boba Fett Edition',
     brand: 'Hayabusa',
     category: 'gloves',
     description:
@@ -170,6 +177,7 @@ export const MOCK_PRODUCTS: ProductDB[] = [
     id: 'prod-006',
     slug: 'hayabusa-star-wars-trooper',
     name: 'Hayabusa x Star Wars – Trooper Edition',
+    nameUa: 'Боксерські рукавиці Hayabusa x Star Wars – Trooper Edition',
     brand: 'Hayabusa',
     category: 'gloves',
     description:
@@ -191,6 +199,7 @@ export const MOCK_PRODUCTS: ProductDB[] = [
     id: 'prod-007',
     slug: 'hayabusa-star-wars-sith',
     name: 'Hayabusa x Star Wars – Sith Edition',
+    nameUa: 'Боксерські рукавиці Hayabusa x Star Wars – Sith Edition',
     brand: 'Hayabusa',
     category: 'gloves',
     description:
@@ -212,6 +221,7 @@ export const MOCK_PRODUCTS: ProductDB[] = [
     id: 'prod-012',
     slug: 'rdx-immaf-gloves',
     name: 'RDX IMMAF Gloves',
+    nameUa: 'Рукавиці для ММА RDX IMMAF',
     brand: 'RDX',
     category: 'gloves',
     description: 'Official IMMAF-approved RDX competition gloves.',
@@ -231,6 +241,7 @@ export const MOCK_PRODUCTS: ProductDB[] = [
     id: 'prod-008',
     slug: 'honour-conviction-shorts',
     name: 'Honour & Conviction Shorts',
+    nameUa: 'Шорти Honour & Conviction',
     brand: 'Honour & Conviction',
     category: 'shorts',
     description: 'High-quality MMA/boxing shorts with a comfortable fit.',
@@ -334,6 +345,7 @@ export const MOCK_PRODUCTS: ProductDB[] = [
     id: 'prod-003',
     slug: 'fuji-duffle-backpack',
     name: 'Fuji Duffle Backpack',
+    nameUa: 'Сумка-рюкзак Fuji Duffle Backpack',
     brand: 'Fuji',
     category: 'bags',
     description: 'Spacious and durable duffle backpack for gym and travel.',

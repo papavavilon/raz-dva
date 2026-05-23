@@ -5,8 +5,11 @@ import type { ProductCategory } from '../../types';
 import { MOCK_PRODUCTS, PRODUCT_CATEGORIES } from '../../db.ts';
 import { prettifyCategory } from '../../utils';
 import ProductCard from '../../components/ProductCard/ProductCard.tsx';
+import { useTranslation } from 'react-i18next';
 
 const Catalog = () => {
+  const { t } = useTranslation();
+
   const [searchParams, setSearchParams] = useSearchParams();
   const [isFiltersOpen, setIsFiltersOpen] = useState(false);
 
@@ -93,7 +96,7 @@ const Catalog = () => {
                 strokeLinejoin="round"
               />
             </svg>
-            <p className="body-l">{prettifyCategory(category)}</p>
+            <p className="body-l">{prettifyCategory(t(category))}</p>
           </div>
         ))}
       </div>
