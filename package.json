@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "vite build && cp dist/index.html dist/404.html",
     "lint": "eslint .",
     "preview": "vite preview",
     "i18n:extract": "i18next 'src/**/*.{js,jsx,ts,tsx}' --config i18next-parser.config.cjs",
